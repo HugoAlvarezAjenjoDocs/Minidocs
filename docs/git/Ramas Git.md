@@ -55,7 +55,7 @@ A la rama `main` se le incorporaran los cambios de la rama `feature`:
 
 [![](https://mermaid.ink/img/pako:eNqFkU1vgzAMhv8K8hmVARttubbVJk3TDttuXNzEkGgkQcGZVCH--0Ir9dJ95OS8j789gXCSoIZO86PHQTU2iU84YzTf2kePVqikJeTg6Zbvng6759eP98Sgtn_gXxP8k8yQ7-inaEghsugo4yzTQhpgRYYaqKMp0X820Ng5-mFg93ayAmr2gVIIg0SmvcbOo4G6xX68qgep2fmr2DuUFL8T8Gm4bG1cSgtnW90tevB9lBXzMNZZtuBV3KwKx1XsMxu1VOhZfW2rrCqqDRYlVesSH8pSimO-3bTFfd7K9V1eIMxzCnSu_3I50flS8zedEIyH?type=png)](https://mermaid.live/edit#pako:eNqFkU1vgzAMhv8K8hmVARttubbVJk3TDttuXNzEkGgkQcGZVCH--0Ir9dJ95OS8j789gXCSoIZO86PHQTU2iU84YzTf2kePVqikJeTg6Zbvng6759eP98Sgtn_gXxP8k8yQ7-inaEghsugo4yzTQhpgRYYaqKMp0X820Ng5-mFg93ayAmr2gVIIg0SmvcbOo4G6xX68qgep2fmr2DuUFL8T8Gm4bG1cSgtnW90tevB9lBXzMNZZtuBV3KwKx1XsMxu1VOhZfW2rrCqqDRYlVesSH8pSimO-3bTFfd7K9V1eIMxzCnSu_3I50flS8zedEIyH)
 
-## Un Commits Temporales
+## Commits Temporales
 
 Git stash es una herramienta útil en Git que te permite guardar temporalmente cambios que aún no deseas comprometer o deseas apartar temporalmente del área de trabajo.
 
@@ -97,7 +97,7 @@ Puedes ver una lista de todos los sets de cambios almacenados en el stash.
 git stash list
 ```
 
-A partir de git 2.13 se puede nombrar a los stages
+A partir de git 2.13 se puede nombrar a los stages (Probablemente tengas ya una versión superior ya que esta salió en 2017, en año el el cual triunfaron memes como el del "negro pensante", el del "chico distraido", los de Donald Trump o el del cocinero que echa sal, por no hablar del verano del Despacito, ya vinimos traumatizados con el Apple Pen del 2016)
 
 ```bash
 git stash push -m "Nombre descriptivo para el stash"

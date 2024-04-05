@@ -12,7 +12,7 @@ Para instalar git tienes que ir a su [pagina oficial](https://git-scm.com/). Des
 En el proceso de instalación, te permitirá configurar git. Entre las que destacan la selección del editor por defecto, por defecto utiliza vim, pero se puede cambiar a VSCode.
 También esta la del nombre por defecto de la rama principal, si dejamos que Git decida, la nombrará como `Master`, en este caso aconsejo cambiarla a `main` que es el nombre estándar que se utiliza actualmente.
 
-Una vez instalado, veremos que tendremos instalados varios programas. En windows cambe destacar que tenemos Git CMD y Git Bash, este último es para usarlo como con una terminal de Bash (Linux), en cualquier caso los comandos de Git son exactamente los mismos. Yo los ejecuto desde PowerShell
+Una vez instalado, veremos que tendremos instalados varios programas. En windows cabe destacar que tenemos Git CMD y Git Bash, este último es para usarlo como con una terminal de Bash (Linux), en cualquier caso los comandos de Git son exactamente los mismos. Yo los ejecuto desde PowerShell
 
 También tenemos instalada Git GUI que es por si no queremos usar la consola pero al trabajar con Git se suele hacer con linea de comandos por lo que no la recomiendo.
 

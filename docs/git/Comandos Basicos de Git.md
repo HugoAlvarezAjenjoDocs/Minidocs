@@ -39,7 +39,7 @@ Para commitear los cambios marcados en etapa stage usaremos:
 git commit -m "Mensaje del commit"
 ```
 
-Con el parametro `-m` Le inicamos el mensaje, si no lo incluimos se abrirá el editor que tengamos y ahí pondremos el mensaje.
+Con el parametro `-m` le inicamos el mensaje, si no lo incluimos se abrirá el editor que tengamos y ahí pondremos el mensaje.
 
 Para commitear todos los cambios y saltarnos la etapa de stage podremos usar el parametro `-a`:
 
