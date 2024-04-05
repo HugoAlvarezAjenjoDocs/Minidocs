@@ -54,3 +54,53 @@ git merge feature
 A la rama `main` se le incorporaran los cambios de la rama `feature`:
 
 [![](https://mermaid.ink/img/pako:eNqFkU1vgzAMhv8K8hmVARttubbVJk3TDttuXNzEkGgkQcGZVCH--0Ir9dJ95OS8j789gXCSoIZO86PHQTU2iU84YzTf2kePVqikJeTg6Zbvng6759eP98Sgtn_gXxP8k8yQ7-inaEghsugo4yzTQhpgRYYaqKMp0X820Ng5-mFg93ayAmr2gVIIg0SmvcbOo4G6xX68qgep2fmr2DuUFL8T8Gm4bG1cSgtnW90tevB9lBXzMNZZtuBV3KwKx1XsMxu1VOhZfW2rrCqqDRYlVesSH8pSimO-3bTFfd7K9V1eIMxzCnSu_3I50flS8zedEIyH?type=png)](https://mermaid.live/edit#pako:eNqFkU1vgzAMhv8K8hmVARttubbVJk3TDttuXNzEkGgkQcGZVCH--0Ir9dJ95OS8j789gXCSoIZO86PHQTU2iU84YzTf2kePVqikJeTg6Zbvng6759eP98Sgtn_gXxP8k8yQ7-inaEghsugo4yzTQhpgRYYaqKMp0X820Ng5-mFg93ayAmr2gVIIg0SmvcbOo4G6xX68qgep2fmr2DuUFL8T8Gm4bG1cSgtnW90tevB9lBXzMNZZtuBV3KwKx1XsMxu1VOhZfW2rrCqqDRYlVesSH8pSimO-3bTFfd7K9V1eIMxzCnSu_3I50flS8zedEIyH)
+
+## Un Commits Temporales
+
+Git stash es una herramienta útil en Git que te permite guardar temporalmente cambios que aún no deseas comprometer o deseas apartar temporalmente del área de trabajo.
+
+Esta sección la indico aquí ya que es especialmente útil cuando estas trabajando en una rama y sin hacer un commit quieres cambiarte a otra ya que si realizas un cambio de rama perderás todos los cambios realizados en ella.
+
+Tras añadir los cambios a stage (`git add`) ejecutas:
+
+```bash
+git stash
+```
+
+Para volver a aplicar los cambios seleccionados puedes usar:
+
+```bash
+git stash apply
+```
+
+Esto aplicará el último conjunto de cambios almacenados en el stash. Si tienes múltiples sets de cambios guardados, puedes aplicar uno en particular especificando el identificador del stash. `git stash apply stash@{2}` 
+
+Una vez que ya no necesites los cambios puedes borrarlos
+
+```bash
+git stash drop
+```
+
+Si tienes varios funciona igual usano el identificador. `git stash drop stash@{2}`.
+
+El yo uso es:
+
+```bash
+git stash pop
+```
+
+Esto aplicará el último set de cambios almacenados en el stash y luego lo eliminará automáticamente del stash.
+
+Puedes ver una lista de todos los sets de cambios almacenados en el stash.
+
+```bash
+git stash list
+```
+
+A partir de git 2.13 se puede nombrar a los stages
+
+```bash
+git stash push -m "Nombre descriptivo para el stash"
+```
+
+Por lo que podras utilizar este nombre como el identificador en los `apply` y `drop`

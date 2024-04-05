@@ -94,3 +94,24 @@ git diff <commit1> <commit2>
 ```
 
 Este muestra la diferencia entre dos commits. (Tienes que pasar el identificador del commit, `git log`).
+
+## Corrección de Commits
+
+Si estas trabajando en una serie de cambios y haces commit pero te das cuenta que tienes que realizar cambios, siempre puedes alterar el último commit con `ammend`.
+Tras enviar a stage el archivo o los archivos que quieres cambiar, ejecutarás:
+
+```bash
+git commit --amend
+```
+
+Esto abrirá tu editor de texto predeterminado con el mensaje del commit anterior. Puedes editar el mensaje si lo deseas. Guarda los cambios y cierra el editor.
+
+Si solo quieres cambiar el mensaje del commit, ejecuta esto último sin añadir ningun archivo a stage.
+
+<u>**Advertencia:**</u> Hacer esto si todavía no has hecho un `push`, si estas trabajando en remoto. Si lo haces cuando ya lo has hecho push, es posible que tendras que hacer:
+
+```bash
+git push --force
+```
+
+Pero ten en cuenta que hacer esto reescribirá la historia del repositorio, lo que podría causar problemas si otros colaboradores ya han basado su trabajo en el commit anterior.
