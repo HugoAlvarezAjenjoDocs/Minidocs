@@ -61,6 +61,7 @@ Cuando estamos trabajando y queremos hacer rollback para dejar el archivo exacta
 
 ```powershell
 git checkout -- archivo.txt
+git checkout -- . # Para aplicarlo a todos los archivos
 ```
 
 En el caso de darnos cuenta de un error ya commiteado podemos revertir los cambios hasta el commit deseado podemos usar `git revert` en el cual le pasaremos el identificador del commit
