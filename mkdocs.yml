@@ -1,4 +1,4 @@
-site_name: Hugo Alvarez Artículos
+site_name: Minidocs
 
 docs_dir: "docs/"
 use_directory_urls: true
@@ -21,6 +21,7 @@ nav:
   - Git:
     - git/Introduccion a Git.md
     - git/Comandos Basicos de Git.md
+    - git/Revirtiendo Cambios Git.md
     - git/Repositorios Remotos Git.md
     - git/Ramas Git.md
     - git/Merge Conflict.md

@@ -55,26 +55,7 @@ git reset HEAD archivo/a/quitar.md
 
 Si nos limitamos a poner `git reset HEAD` serán todos los cambios
 
-## Revertir Cambios
-
-Cuando estamos trabajando y queremos hacer rollback para dejar el archivo exactamente como estaba en el último commit
-
-```powershell
-git checkout -- archivo.txt
-git checkout -- . # Para aplicarlo a todos los archivos
-```
-
-En el caso de darnos cuenta de un error ya commiteado podemos revertir los cambios hasta el commit deseado podemos usar `git revert` en el cual le pasaremos el identificador del commit
-
-```powershell
-git revert abc123
-```
-
-Para ver este identificador podremos usar `git log` el cual tiene varios parametros utiles, entre los que destacan `--oneline` o `--graph`
-
-```powershell
-git log --oneline --graph
-```
+>Esta parte de `git reset` cobrará sentido proximamente
 
 ## Diferencias entre los Commits
 
