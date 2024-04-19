@@ -57,6 +57,16 @@ Si nos limitamos a poner `git reset HEAD` serán todos los cambios
 
 >Esta parte de `git reset` cobrará sentido proximamente
 
+## Historial de Commits
+
+Si queremos ver el historial de commits que hemos hecho a lo largo del desarrollo podemos usar el comando `git log`. Este nos muestra el historial junto con los ids de los commits que utilizaremos más tarde. Mi forma favorita de hacerlo es mediante los flags de:
+
+```bash
+git log --oneline --graph
+```
+
+El cual te los muestra en forma de grafo de las diferentes ramas y el commit te lo muestra en una sola linea.
+
 ## Diferencias entre los Commits
 
 El comando `git diff` es muy útil, permite ver las diferencias entre distintos estados de un repositorio.
@@ -69,7 +79,7 @@ Los más útiles bajo mi opinión son:
 git diff HEAD
 ```
 
-Que muestra las diferencias entre el directorio de trabajo y el último commit. Y también es útil
+Que muestra las diferencias entre el directorio de trabajo y el último commit. Y también es útil.
 
 ```bash
 git diff <commit1> <commit2>
@@ -97,3 +107,53 @@ git push --force
 ```
 
 Pero ten en cuenta que hacer esto reescribirá la historia del repositorio, lo que podría causar problemas si otros colaboradores ya han basado su trabajo en el commit anterior.
+
+## Commits Temporales
+
+Git stash es una herramienta útil en Git que te permite guardar temporalmente cambios que aún no deseas comprometer o deseas apartar temporalmente del área de trabajo.
+
+Es especialmente útil cuando estas trabajando en una rama y sin hacer un commit quieres cambiarte a otra ya que si realizas un cambio de rama perderás todos los cambios realizados en ella.
+
+Tras añadir los cambios a stage (`git add`) ejecutas:
+
+```bash
+git stash
+```
+
+Para volver a aplicar los cambios seleccionados puedes usar:
+
+```bash
+git stash apply
+```
+
+Esto aplicará el último conjunto de cambios almacenados en el stash. Si tienes múltiples sets de cambios guardados, puedes aplicar uno en particular especificando el identificador del stash. `git stash apply stash@{2}` 
+
+Una vez que ya no necesites los cambios puedes borrarlos
+
+```bash
+git stash drop
+```
+
+Si tienes varios funciona igual usano el identificador. `git stash drop stash@{2}`.
+
+El yo uso es:
+
+```bash
+git stash pop
+```
+
+Esto aplicará el último set de cambios almacenados en el stash y luego lo eliminará automáticamente del stash.
+
+Puedes ver una lista de todos los sets de cambios almacenados en el stash.
+
+```bash
+git stash list
+```
+
+A partir de git 2.13 se puede nombrar a los stages (Probablemente tengas ya una versión superior ya que esta salió en 2017, en año el el cual la gente flipaba con el meme del cocinero que echa sal).
+
+```bash
+git stash push -m "Nombre descriptivo para el stash"
+```
+
+Por lo que podras utilizar este nombre como el identificador en los `apply` y `drop`
